@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Entity;
+using System;
 using System.Configuration;
 using System.Data.SqlClient;
-using Entity;
 
 namespace DataAccess
 {
@@ -14,6 +10,8 @@ namespace DataAccess
         public static User ValidateUser(string userName, string password)
         {
             User user = null;
+
+            //connectionString will have whole string inside connectionString in add node in Web.config file
             string connectionString = ConfigurationManager.ConnectionStrings["FirstWeb"].ToString();
             SqlConnection connection = new SqlConnection(connectionString);
 
@@ -39,6 +37,11 @@ namespace DataAccess
             }
             return user;
         }
-        
+
+        //public static user ViewProfile()
+        //{
+
+        //}
+
     }
 }

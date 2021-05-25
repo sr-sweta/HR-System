@@ -11,16 +11,16 @@ namespace FirstWeb
 {
 
 
-    public partial class Employee
+    public partial class EmployeeType
     {
 
         /// <summary>
-        /// UserLabel control.
+        /// GridViewEmployeeType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label UserLabel;
+        protected global::System.Web.UI.WebControls.GridView GridViewEmployeeType;
     }
 }

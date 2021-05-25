@@ -15,7 +15,9 @@ namespace FirstWeb
         {
             if (!IsPostBack)
             {
+                //It took Employee object from session from UserForm class
                 User user = (User)Session["User"];
+
                 UserLabel.Text = "Welcome " + user.FirstName + " " + user.LastName;
             }
         }

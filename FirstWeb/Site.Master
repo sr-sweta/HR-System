@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="FirstWeb.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>SIT Site</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <div>
+            <div style="width: 100%; height: 100px; text-align: center; vertical-align: middle; font-size: 32px; background-color: #fbfafd;">
+                <img src="images/sitLogo.png" style="height: 60px; padding-top: 25px" />
+                <span class="auto-style1"><strong>Silicon Institute of Technology
+                </strong></span>
+            </div>
+            <table style="width: 100%">
+                <tr>
+                    <td style="width: 20%">&nbsp;
+                    </td>
+                    <td style="width: 60%">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td style="width: 20%">&nbsp;
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+    </form>
+</body>
+</html>
