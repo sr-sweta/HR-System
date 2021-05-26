@@ -13,7 +13,7 @@ namespace Entity
 		{
 		}
 
-		public EmployeeCategory(int id, string description, bool isActive, bool isDirty, string createdBy, string createdDate,
+		public EmployeeCategory(int id, string description, bool isActive, string createdBy, string createdDate,
 							string lastUpdatedBy, string lastUpdatedDate) :
 			base(id, description, isActive, createdBy, createdDate, lastUpdatedBy, lastUpdatedDate)
 		{

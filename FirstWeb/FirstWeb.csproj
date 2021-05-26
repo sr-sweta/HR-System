@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Employee.aspx" />
+    <Content Include="EmployeeCategory.aspx" />
     <Content Include="EmployeeType.aspx" />
     <Content Include="Global.asax" />
     <Content Include="images\sitLogo.png" />
@@ -81,6 +82,13 @@
     </Compile>
     <Compile Include="Employee.aspx.designer.cs">
       <DependentUpon>Employee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeCategory.aspx.cs">
+      <DependentUpon>EmployeeCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeCategory.aspx.designer.cs">
+      <DependentUpon>EmployeeCategory.aspx</DependentUpon>
     </Compile>
     <Compile Include="EmployeeType.aspx.cs">
       <DependentUpon>EmployeeType.aspx</DependentUpon>

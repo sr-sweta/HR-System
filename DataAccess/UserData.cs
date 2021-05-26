@@ -38,10 +38,5 @@ namespace DataAccess
             return user;
         }
 
-        //public static user ViewProfile()
-        //{
-
-        //}
-
     }
 }

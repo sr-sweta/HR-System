@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="EmployeeType.aspx.cs" Inherits="FirstWeb.EmployeeType" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="EmployeeCategory.aspx.cs" Inherits="FirstWeb.EmployeeCategory" %>
 
-<asp:Content runat="server" ContentPlaceHolderID="MainContent" ID="EmployeeTypeContent">
+<asp:Content runat="server" ContentPlaceHolderID="MainContent" ID="EmployeeCategoryContent">
     <div>
-    <asp:GridView ID="GridViewEmployeeType" runat="server" AlternatingRowStyle-BackColor="WhiteSmoke" Width="548px" Font-Type="Helvetica" CellPadding="4" ForeColor="Black" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellSpacing="2">
+    <asp:GridView ID="GridViewEmployeeCategory" runat="server" AlternatingRowStyle-BackColor="WhiteSmoke" Width="548px" Font-Type="Helvetica" CellPadding="4" ForeColor="Black" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellSpacing="2">
         <Columns>
-            <asp:BoundField HeaderText="Employee Type" DataField="Description" />
+            <asp:BoundField HeaderText="Employee Category" DataField="Description" />
         </Columns>
         <FooterStyle BackColor="#CCCCCC"/>
         <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
@@ -18,4 +18,3 @@
     </asp:GridView>
 </div>
 </asp:Content>
-

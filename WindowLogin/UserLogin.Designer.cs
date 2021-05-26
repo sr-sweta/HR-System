@@ -38,42 +38,41 @@ namespace WindowLogin
             // 
             // username
             // 
-            this.username.Location = new System.Drawing.Point(423, 74);
+            this.username.Location = new System.Drawing.Point(273, 74);
+            this.username.MaximumSize = new System.Drawing.Size(500, 500);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(189, 20);
-            this.username.TabIndex = 0;
+            this.username.Size = new System.Drawing.Size(100, 20);
+            this.username.TabIndex = 4;
             // 
             // password
             // 
-            this.password.Location = new System.Drawing.Point(423, 166);
+            this.password.Location = new System.Drawing.Point(273, 142);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(189, 20);
-            this.password.TabIndex = 1;
+            this.password.Size = new System.Drawing.Size(100, 20);
+            this.password.TabIndex = 3;
             // 
             // labelUsername
             // 
-            this.labelUsername.AutoSize = true;
-            this.labelUsername.Location = new System.Drawing.Point(298, 81);
+            this.labelUsername.Location = new System.Drawing.Point(134, 74);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(55, 13);
+            this.labelUsername.Size = new System.Drawing.Size(60, 20);
             this.labelUsername.TabIndex = 2;
             this.labelUsername.Text = "Username";
             // 
             // labelpassword
             // 
-            this.labelpassword.AutoSize = true;
-            this.labelpassword.Location = new System.Drawing.Point(301, 172);
+            this.labelpassword.Location = new System.Drawing.Point(134, 142);
             this.labelpassword.Name = "labelpassword";
-            this.labelpassword.Size = new System.Drawing.Size(53, 13);
-            this.labelpassword.TabIndex = 3;
+            this.labelpassword.Size = new System.Drawing.Size(60, 20);
+            this.labelpassword.TabIndex = 1;
             this.labelpassword.Text = "Password";
             // 
             // login
             // 
-            this.login.Location = new System.Drawing.Point(423, 246);
+            this.login.Location = new System.Drawing.Point(273, 211);
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(75, 23);
-            this.login.TabIndex = 4;
+            this.login.TabIndex = 0;
             this.login.Text = "login";
             this.login.UseVisualStyleBackColor = true;
             this.login.Click += new System.EventHandler(this.Login_Click);
@@ -82,7 +81,7 @@ namespace WindowLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 300);
             this.Controls.Add(this.login);
             this.Controls.Add(this.labelpassword);
             this.Controls.Add(this.labelUsername);
