@@ -17,8 +17,16 @@ namespace FirstWeb
             {
                 //It took Employee object from session from UserForm class
                 User user = (User)Session["User"];
+                if( user == null)
+                {
+                    UserLabel.Text = "Please login to get info.";
+                }
+                else
+                {
+                    UserLabel.Text = "Welcome " + user.FirstName + " " + user.LastName;
 
-                UserLabel.Text = "Welcome " + user.FirstName + " " + user.LastName;
+                }
+
             }
         }
     }

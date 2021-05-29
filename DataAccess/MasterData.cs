@@ -1,5 +1,6 @@
 ﻿using Entity;
 using System;
+using System.Data;
 using System.Collections;
 using System.Data.SqlClient;
 
@@ -10,13 +11,21 @@ namespace DataAccess
         public static ArrayList GetAllEmployeeType()
         {
             ArrayList list = new ArrayList();
-            SqlDataReader reader = DataHelper.GetSqlCommandObject("usp_GetAllEmployeeType").ExecuteReader();
-            if (reader.HasRows)
+
+            DataSet records = new DataSet();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = DataHelper.GetSqlCommandObject("usp_GetAllEmployeeType");
+            adapter.Fill(records);
+
+            //SqlDataReader reader = DataHelper.GetSqlCommandObject("usp_GetAllEmployeeType").ExecuteReader();
+            if (records != null && records.Tables[0].Rows.Count > 0)
             {
-                while (reader.Read())
+                DataView view = new DataView(records.Tables[0]);
+                view.RowFilter = "IsActive = 1";
+                foreach(DataRow row in view.Table.Rows)
                 {
-                    list.Add(new EmployeeType(Convert.ToInt32(reader["Id"].ToString()), reader["Description"].ToString(), Convert.ToBoolean(reader["IsActive"].ToString()),
-                                reader["CreatedBy"].ToString(), reader["CreatedDate"].ToString(), reader["LastUpdatedBy"].ToString(), reader["LastUpdatedDate"].ToString()));
+                    list.Add(new EmployeeType(Convert.ToInt32(row["Id"].ToString()), row["Description"].ToString(), Convert.ToBoolean(row["IsActive"].ToString()),
+                                row["CreatedBy"].ToString(), row["CreatedDate"].ToString(), row["LastUpdatedBy"].ToString(), row["LastUpdatedDate"].ToString()));
                 }
 
             }
@@ -26,13 +35,19 @@ namespace DataAccess
         public static ArrayList GetAllActiveEmployeeType()
         {
             ArrayList list = new ArrayList();
-            SqlDataReader reader = DataHelper.GetSqlCommandObject("usp_GetAllActiveEmployeeType").ExecuteReader();
-            if (reader.HasRows)
+            //SqlDataReader reader = DataHelper.GetSqlCommandObject("usp_GetAllActiveEmployeeType").ExecuteReader();
+            DataSet records = new DataSet();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = DataHelper.GetSqlCommandObject("usp_GetAllActiveEmployeeType");
+            adapter.Fill(records);
+
+            if (records != null && records.Tables[0].Rows.Count > 0)
             {
-                while (reader.Read())
+                DataView view = new DataView(records.Tables[0]);
+                foreach (DataRow row in view.Table.Rows)
                 {
-                    list.Add(new EmployeeType(Convert.ToInt32(reader["Id"].ToString()), reader["Description"].ToString(), Convert.ToBoolean(reader["IsActive"].ToString()),
-                                reader["CreatedBy"].ToString(), reader["CreatedDate"].ToString(), reader["LastUpdatedBy"].ToString(), reader["LastUpdatedDate"].ToString()));
+                    list.Add(new EmployeeType(Convert.ToInt32(row["Id"].ToString()), row["Description"].ToString(), Convert.ToBoolean(row["IsActive"].ToString()),
+                                row["CreatedBy"].ToString(), row["CreatedDate"].ToString(), row["LastUpdatedBy"].ToString(), row["LastUpdatedDate"].ToString()));
                 }
 
             }

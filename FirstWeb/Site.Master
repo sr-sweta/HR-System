@@ -4,20 +4,79 @@
 
 <html>
 <head runat="server">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>SIT Site</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style>
+        div.background {
+            background: url(images/college.jpg) repeat;
+            border: 2px solid black;
+            margin-bottom: 5px;
+        }
+
+        div.transbox {
+            margin: 30px;
+            background-color: #ffffff;
+            border: 1px solid black;
+            opacity: 0.6;
+        }
+
+            div.transbox p {
+                margin: 5%;
+                font-weight: bold;
+                color: #000000;
+            }
+
+        .footer_style {
+            background-color: skyblue !important;
+            margin-top: 100%;
+        }
+
+            .footer_style p {
+                margin-bottom: 0 !important;
+            }
+    </style>
 </head>
 <body>
 
     <form id="form1" runat="server">
         <div>
-            <div style="width: 100%; height: 100px; text-align: center; vertical-align: middle; font-size: 32px; background-color: #fbfafd; font-family:Georgia;">
-                <img src="images/sitLogo.png" style="height: 60px; padding-top: 25px" />
-                <span class="auto-style1"><strong>Silicon Institute of Technology
+            <div style="width: 100%; height: 100px; text-align: center; vertical-align: middle; font-size: 32px; background-color: #fbfafd; font-family: Georgia;">
+                <img src="images/sitLogo.png" style="height: 60px;" />
+                <span class="auto-style1" style="margin-top: 100px;"><strong>Silicon Institute of Technology
                 </strong></span>
             </div>
-            <table style="width: 100%; padding-top:10px">
+            <table style="width: 100%; padding-top: 10px">
+                <tr>
+                    <td colspan="3" class="auto-style1">
+                        <nav class="navbar navbar-inverse" visible="false" style="background-color: antiquewhite; padding: 0px 4px 4px 4px; margin: 0px 1px 4px 1px;">
+                            <div class="container">
+                                <div class="collapse navbar-collapse" id="nav1">
+                                    <ul class="nav navbar-nav">
+                                        <li>
+                                            <asp:HyperLink href="https://localhost:44364/About.aspx" runat="server">About Us</asp:HyperLink></li>
+                                        <li><a href="https://localhost:44364/UserForm.aspx">UserForm</a></li>
+                                        <li><a href="https://localhost:44364/Employee.aspx">Employee</a></li>
+                                        <li class="dropdown">
+                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu<span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="https://localhost:44364/EmployeeType.aspx">EmployeeType</a></li>
+                                                <li><a href="https://localhost:44364/EmployeeCategory.aspx">EmployeeCategory</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </td>
+                </tr>
                 <tr>
                     <td style="width: 20%">&nbsp;
                     </td>
@@ -28,9 +87,13 @@
                     <td style="width: 20%">&nbsp;
                     </td>
                 </tr>
-
             </table>
+            <footer>
+                <div class="footer_style text-white text-center container-fluid">
+                    <p><span>&#169;</span>No copyright issue</p>
 
+                </div>
+            </footer>
         </div>
     </form>
 </body>

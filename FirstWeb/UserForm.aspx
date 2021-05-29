@@ -30,7 +30,7 @@
                 <td style="width: 50%; text-align: center; padding-top:20px;">
                     <asp:Button runat="server" ID="buttonCancel" CausesValidation="false" Text="Cancel"></asp:Button></td>
                 <td style="text-align:left; padding-top:20px; ">
-                    <asp:Button runat="server" ID="buttonSave" Text="Save" OnClick="ButtonSave_Click"></asp:Button></td>
+                    <asp:Button runat="server" ID="buttonSave" Text="Login" OnClick="ButtonSave_Click"></asp:Button></td>
             </tr>
         </table>
     </div>
