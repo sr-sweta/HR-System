@@ -11,6 +11,9 @@ using BusinessLogic;
 
 namespace FirstWeb
 {
+    /// <summary>
+    /// Login related functions
+    /// </summary>
     public partial class UserForm : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
@@ -28,7 +31,7 @@ namespace FirstWeb
             else
             {
                 Session["User"] = user;
-                Response.Redirect("EmployeeType.aspx");
+                Response.Redirect("EmployeeTypes.aspx");
             }
         }
 

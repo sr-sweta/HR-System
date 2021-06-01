@@ -5,8 +5,13 @@ using System.Data.SqlClient;
 
 namespace DataAccess
 {
+    /// <summary>
+    /// Handles all activities related to User Table
+    /// </summary>
+    
     public class UserData
     {
+        //Validates User credentials for login
         public static User ValidateUser(string userName, string password)
         {
             User user = null;
@@ -36,6 +41,17 @@ namespace DataAccess
                         reader["LastName"].ToString(), reader["Password"].ToString(), Convert.ToBoolean(reader["IsActive"].ToString()));
             }
             return user;
+        }
+
+        //Editing Firstname and Lastname of User
+        public static void EditUser(string username, string password, string firstName, string lastName)
+		{
+            SqlCommand command = DataHelper.GetSqlCommandObject("usp_EditUser");
+            command.Parameters.Add(new SqlParameter("@Username", username));
+            command.Parameters.Add(new SqlParameter("@Password", password));
+            command.Parameters.Add(new SqlParameter("@FirstName", firstName));
+            command.Parameters.Add(new SqlParameter("@LastName", lastName));
+            command.ExecuteNonQuery();
         }
 
     }

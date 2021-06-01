@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
+    /// <summary>
+    /// Contains all properties related to User
+    /// </summary>
     public class User
     {
         #region PrivateVariables
@@ -14,6 +17,9 @@ namespace Entity
         private string firstName = string.Empty;
         private string lastName = string.Empty;
         private string password = string.Empty;
+        //private string phoneNumber = string.Empty;
+        //private string email = string.Empty;
+        //private string address = string.Empty;
         private bool isActive = true;
         private bool isDirty = false;
         #endregion
@@ -59,6 +65,24 @@ namespace Entity
             get { return isActive; }
             set { isActive = value; isDirty = true; }
         }
+
+        //public string Email
+        //{
+        //    get { return email; }
+        //    set { email = value; isDirty = true; }
+        //}
+
+        //public string Address
+        //{
+        //    get { return address; }
+        //    set { address = value; isDirty = true; }
+        //}
+
+        //public string PhoneNumber
+        //{
+        //    get { return phoneNumber; }
+        //    set { phoneNumber = value; isDirty = true; }
+        //}
 
         #endregion
 

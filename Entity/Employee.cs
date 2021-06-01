@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
+    /// <summary>
+    /// Contains all properties related to Employee
+    /// </summary>
     public class Employee
     {
+        #region Private Variables
+
         private int id = -1;
         private string firstName = string.Empty;
         private string lastName = string.Empty;
@@ -18,6 +23,10 @@ namespace Entity
         private string createdDate = string.Empty;
         private string lastUpdatedBy = string.Empty;
         private string lastUpdatedDate = string.Empty;
+
+        #endregion
+
+        #region Properties
 
         public bool IsDirty
         {
@@ -31,7 +40,7 @@ namespace Entity
             set { id = value; IsDirty = true; }
         }
 
-        public string  FirstName
+        public string FirstName
         {
             get { return firstName; }
             set { firstName = value; IsDirty = true; }
@@ -54,5 +63,8 @@ namespace Entity
             get { return employeeType; }
             set { employeeType = value; IsDirty = true; }
         }
+
+        #endregion
+
     }
 }

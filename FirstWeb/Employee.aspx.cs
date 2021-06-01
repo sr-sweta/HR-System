@@ -29,5 +29,46 @@ namespace FirstWeb
 
             }
         }
-    }
+
+		protected void DOBImageButton_Click(object sender, ImageClickEventArgs e)
+		{
+            DOBCalendar.Visible = true;
+
+        }
+
+		protected void DOBCalendar_SelectionChanged(object sender, EventArgs e)
+		{
+            DOB.Text = DOBCalendar.SelectedDate.ToString("dd/mm/yyyy");
+            DOBCalendar.Visible = false;
+        }
+
+		protected void ButtonSave_Click(object sender, EventArgs e)
+		{
+            if (!IsPostBack)
+            {
+                //It took Employee object from session from UserForm class
+                User user = (User)Session["User"];
+                UserLogic.EditUser(user.Username, user.Password, TextBoxFirstName.Text.Trim(), TextBoxLastName.Text.Trim());
+
+            }
+                
+   //         if (user == null)
+   //         {
+   //             UserLabel.Text = "Please login to get info.";
+   //             FirstNameLabel.Visible = false;
+   //             TextBoxFirstName.Visible = false;
+   //             TextBoxLastName.Visible = false;
+   //             LastNameLabel.Visible = false;
+   //         }
+			//else
+			//{
+   //             UserLabel.Visible = false;
+   //             FirstNameLabel.Visible = true;
+   //             TextBoxFirstName.Visible = true;
+   //             TextBoxLastName.Visible = true;
+   //             LastNameLabel.Visible = true;
+               
+    //        }
+        }
+	}
 }

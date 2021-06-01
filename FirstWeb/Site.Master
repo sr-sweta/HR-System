@@ -60,17 +60,9 @@
                             <div class="container">
                                 <div class="collapse navbar-collapse" id="nav1">
                                     <ul class="nav navbar-nav">
-                                        <li>
-                                            <asp:HyperLink href="https://localhost:44364/About.aspx" runat="server">About Us</asp:HyperLink></li>
-                                        <li><a href="https://localhost:44364/UserForm.aspx">UserForm</a></li>
-                                        <li><a href="https://localhost:44364/Employee.aspx">Employee</a></li>
-                                        <li class="dropdown">
-                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu<span class="caret"></span></a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="https://localhost:44364/EmployeeType.aspx">EmployeeType</a></li>
-                                                <li><a href="https://localhost:44364/EmployeeCategory.aspx">EmployeeCategory</a></li>
-                                            </ul>
-                                        </li>
+                                        <li><asp:HyperLink href="https://localhost:44364/About.aspx" runat="server">About Us</asp:HyperLink></li>
+                                        <li><a href="https://localhost:44364/UserForm.aspx">Login</a></li>
+                                        <!--<li><a href="https://localhost:44364/Employee.aspx">Employee</a></li>-->
                                     </ul>
                                 </div>
                             </div>

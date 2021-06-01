@@ -3,8 +3,13 @@ using System.Data.SqlClient;
 
 namespace DataAccess
 {
+    /// <summary>
+    /// DataHelper contains configuration i.e. connectionString which will be used for all stored procedure
+    /// </summary>
+   
     public class DataHelper
     {
+        //GetSqlCommandObject function creates command for all stored procedures
         internal static SqlCommand GetSqlCommandObject(string procedureName)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["FirstWeb"].ToString();

@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoryData.cs" />
     <Compile Include="DataHelper.cs" />
     <Compile Include="MasterData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

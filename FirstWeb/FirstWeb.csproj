@@ -69,9 +69,10 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Employee.aspx" />
-    <Content Include="EmployeeCategory.aspx" />
-    <Content Include="EmployeeType.aspx" />
+    <Content Include="EmployeeTypes.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="images\CalendarIcon.jpg" />
+    <Content Include="images\college.jpg" />
     <Content Include="images\sitLogo.png" />
     <Content Include="UserForm.aspx" />
     <Content Include="Web.config" />
@@ -91,19 +92,12 @@
     <Compile Include="Employee.aspx.designer.cs">
       <DependentUpon>Employee.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeCategory.aspx.cs">
-      <DependentUpon>EmployeeCategory.aspx</DependentUpon>
+    <Compile Include="EmployeeTypes.aspx.cs">
+      <DependentUpon>EmployeeTypes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EmployeeCategory.aspx.designer.cs">
-      <DependentUpon>EmployeeCategory.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EmployeeType.aspx.cs">
-      <DependentUpon>EmployeeType.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EmployeeType.aspx.designer.cs">
-      <DependentUpon>EmployeeType.aspx</DependentUpon>
+    <Compile Include="EmployeeTypes.aspx.designer.cs">
+      <DependentUpon>EmployeeTypes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
