@@ -98,6 +98,12 @@ namespace Entity
 
         }
 
+        public ReferenceDataActive(int id, string description)
+        {
+            this.id = id;
+            this.description = description;
+        }
+
         #endregion
 
     }

@@ -31,7 +31,7 @@ namespace FirstWeb
             else
             {
                 Session["User"] = user;
-                Response.Redirect("EmployeeTypes.aspx");
+                Response.Redirect("Employees.aspx");
             }
         }
 

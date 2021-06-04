@@ -62,7 +62,8 @@
                                     <ul class="nav navbar-nav">
                                         <li><asp:HyperLink href="https://localhost:44364/About.aspx" runat="server">About Us</asp:HyperLink></li>
                                         <li><a href="https://localhost:44364/UserForm.aspx">Login</a></li>
-                                        <!--<li><a href="https://localhost:44364/Employee.aspx">Employee</a></li>-->
+                                        <li><a href="https://localhost:44364/Employees.aspx">Employee</a></li>
+                                        <li><a href="https://localhost:44364/EmployeeTypes.aspx">Employee Menu</a></li>
                                     </ul>
                                 </div>
                             </div>

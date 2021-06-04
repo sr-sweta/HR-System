@@ -43,16 +43,5 @@ namespace DataAccess
             return user;
         }
 
-        //Editing Firstname and Lastname of User
-        public static void EditUser(string username, string password, string firstName, string lastName)
-		{
-            SqlCommand command = DataHelper.GetSqlCommandObject("usp_EditUser");
-            command.Parameters.Add(new SqlParameter("@Username", username));
-            command.Parameters.Add(new SqlParameter("@Password", password));
-            command.Parameters.Add(new SqlParameter("@FirstName", firstName));
-            command.Parameters.Add(new SqlParameter("@LastName", lastName));
-            command.ExecuteNonQuery();
-        }
-
     }
 }

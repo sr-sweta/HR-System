@@ -20,11 +20,5 @@ namespace BusinessLogic
             return UserData.ValidateUser(userName, password);
         }
 
-        //Passes Edit paramteres to Data Access Layer
-        public static void EditUser(string userName,string password, string firstName, string lastName)
-		{
-            UserData.EditUser(userName, password, firstName, lastName);
-
-        }
     }
 }

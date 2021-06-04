@@ -23,9 +23,12 @@ namespace Entity
 		{
 		}
 
+		public EmployeeCategory(int id, string description) :
+			base(id, description)
+		{
+		}
+
 		#endregion
 	}
-
-
 
 }

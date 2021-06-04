@@ -78,8 +78,6 @@ namespace DataAccess
             command.Parameters.Add(new SqlParameter("@UserId", user.Id));
             command.ExecuteNonQuery();
             employeeType.Id = Convert.ToInt32(command.Parameters["@Id"].Value.ToString());
-            //(new System.Collections.Generic.Mscorlib_CollectionDebugView<System.Data.SqlClient.SqlParameter>(command.Parameters._items).Items[0]).Value
-
         }
 
         //It updates the Description and Active status of Employee Type
