@@ -72,8 +72,12 @@
     <Content Include="Employees.aspx" />
     <Content Include="EmployeeTypes.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="images\ABP-news-award-2016.jpg" />
+    <Content Include="images\airel-view.jpg" />
+    <Content Include="images\bbcoat.jpg" />
     <Content Include="images\CalendarIcon.jpg" />
     <Content Include="images\college.jpg" />
+    <Content Include="images\ISTE-Certificate-SITBBSR-20.jpg" />
     <Content Include="images\sitLogo.png" />
     <Content Include="UserForm.aspx" />
     <Content Include="Web.config" />

@@ -17,7 +17,7 @@
 			font-weight:bold;
 		}
 	</style>
-	<div style="min-height: 500px;">
+	<div>
 		<asp:Button Text="Employee Types" OnClick="ButtonEmployeeTypes_Click" BorderStyle="Solid" ID="ButtonEmployeeTypes" runat="server"/>
 		<asp:Button Text="Employee Categories" OnClick="ButtonEmployeeCategories_Click" BorderStyle="Solid" ID="ButtonEmployeeCategories" runat="server" />
 		<asp:Button Text="Document Type" OnClick="ButtonDocumentTypes_Click" BorderStyle="Solid" ID="ButtonDocumentTypes" runat="server" />

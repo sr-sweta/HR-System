@@ -69,7 +69,6 @@ namespace DataAccess
         //It inserts new Active Employee Type 
         public static void InsertEmployeeType(EmployeeType employeeType, User user)
         {
-            ArrayList list = new ArrayList();
             SqlCommand command = DataHelper.GetSqlCommandObject("usp_InsertEmployeeType");
             SqlParameter parameter = new SqlParameter("@Id", System.Data.SqlDbType.Int, 16);
             parameter.Direction = System.Data.ParameterDirection.Output;
@@ -83,7 +82,6 @@ namespace DataAccess
         //It updates the Description and Active status of Employee Type
         public static void UpdateEmployeeType(EmployeeType employeeType, User user)
         {
-            ArrayList list = new ArrayList();
             SqlCommand command = DataHelper.GetSqlCommandObject("usp_UpdateEmployeeType");
             command.Parameters.Add(new SqlParameter("@Id", employeeType.Id));
             command.Parameters.Add(new SqlParameter("@Description", employeeType.Description));
@@ -150,7 +148,6 @@ namespace DataAccess
         //It inserts new Active Employee Category 
         public static void InsertEmployeeCategory(EmployeeCategory employeeCategory, User user)
         {
-            ArrayList list = new ArrayList();
             SqlCommand command = DataHelper.GetSqlCommandObject("usp_InsertEmployeeCategory");
             SqlParameter parameter = new SqlParameter("@Id", System.Data.SqlDbType.Int, 16);
             parameter.Direction = System.Data.ParameterDirection.Output;
@@ -164,7 +161,6 @@ namespace DataAccess
         //It updates the Description and Active status of Employee Category
         public static void UpdateEmployeeCategory(EmployeeCategory employeeCategory, User user)
         {
-            ArrayList list = new ArrayList();
             SqlCommand command = DataHelper.GetSqlCommandObject("usp_UpdateEmployeeCategory");
             command.Parameters.Add(new SqlParameter("@Id", employeeCategory.Id));
             command.Parameters.Add(new SqlParameter("@Description", employeeCategory.Description));
@@ -232,7 +228,6 @@ namespace DataAccess
         //It inserts new Active Document Type 
         public static void InsertDocumentType(DocumentType DocumentType, User user)
         {
-            ArrayList list = new ArrayList();
             SqlCommand command = DataHelper.GetSqlCommandObject("usp_InsertDocumentType");
             SqlParameter parameter = new SqlParameter("@Id", System.Data.SqlDbType.Int, 16);
             parameter.Direction = System.Data.ParameterDirection.Output;
@@ -246,7 +241,6 @@ namespace DataAccess
         //It updates the Description and Active status of Document Type 
         public static void UpdateDocumentType(DocumentType DocumentType, User user)
         {
-            ArrayList list = new ArrayList();
             SqlCommand command = DataHelper.GetSqlCommandObject("usp_UpdateDocumentType");
             command.Parameters.Add(new SqlParameter("@Id", DocumentType.Id));
             command.Parameters.Add(new SqlParameter("@Description", DocumentType.Description));

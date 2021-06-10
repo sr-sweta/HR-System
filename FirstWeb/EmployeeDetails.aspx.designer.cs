@@ -24,6 +24,15 @@ namespace FirstWeb
 		protected global::System.Web.UI.WebControls.TextBox TextBoxFirstName;
 
 		/// <summary>
+		/// RequiredFieldValidatorFirstName control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorFirstName;
+
+		/// <summary>
 		/// TextBoxMiddleName control.
 		/// </summary>
 		/// <remarks>
@@ -40,6 +49,15 @@ namespace FirstWeb
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
 		protected global::System.Web.UI.WebControls.TextBox TextBoxLastName;
+
+		/// <summary>
+		/// RequiredFieldValidatorLastName control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorLastName;
 
 		/// <summary>
 		/// TextBoxDOB control.
@@ -105,6 +123,15 @@ namespace FirstWeb
 		protected global::System.Web.UI.WebControls.DropDownList DropDownTypes;
 
 		/// <summary>
+		/// RequiredFieldValidatorType control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorType;
+
+		/// <summary>
 		/// DropDownCategories control.
 		/// </summary>
 		/// <remarks>
@@ -112,6 +139,51 @@ namespace FirstWeb
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
 		protected global::System.Web.UI.WebControls.DropDownList DropDownCategories;
+
+		/// <summary>
+		/// CheckBoxIsActive control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.CheckBox CheckBoxIsActive;
+
+		/// <summary>
+		/// DropDownListDocumentType control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.DropDownList DropDownListDocumentType;
+
+		/// <summary>
+		/// FileUploadDocument control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.FileUpload FileUploadDocument;
+
+		/// <summary>
+		/// ButtonUpload control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Button ButtonUpload;
+
+		/// <summary>
+		/// GridViewDocuments control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.GridView GridViewDocuments;
 
 		/// <summary>
 		/// ButtonSave control.

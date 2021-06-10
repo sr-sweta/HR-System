@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="UserForm.aspx.cs" Inherits="FirstWeb.UserForm" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="MainContent" ID="UserLogin">
-    <div style="background-color: aqua; height: 250px; width: 100%;">
+	<div style="background-color:aqua;padding-bottom:10px;" class="auto-style1">
         <table style="width: 100%">
             <tr>
                 <td colspan="2" style="font-weight: bold; font-size:30px; color:white; font-family:Helvetica; text-align: center">Login Credentials</td>
@@ -30,8 +30,17 @@
                 <td style="width: 50%; text-align: center; padding-top:20px;">
                     <asp:Button runat="server" ID="buttonCancel" CausesValidation="false" Text="Cancel"></asp:Button></td>
                 <td style="text-align:left; padding-top:20px; ">
-                    <asp:Button runat="server" ID="buttonSave" Text="Login" OnClick="ButtonSave_Click"></asp:Button></td>
+                    <asp:Button runat="server" ID="buttonSave" CausesValidation="true" Text="Login" OnClick="ButtonSave_Click" Width="60px"></asp:Button></td>
             </tr>
         </table>
     </div>
 </asp:Content>
+<asp:Content ID="Content1" runat="server" contentplaceholderid="head">
+	<style type="text/css">
+		.auto-style1 {
+			width: 100%;
+			margin-top: 0%;
+		}
+	</style>
+</asp:Content>
+

@@ -17,6 +17,10 @@ namespace Entity
 		{
 		}
 
+		public DocumentType(int id, string description) : base(id, description)
+		{
+		}
+
 		public DocumentType(int id, string description, bool isActive, string createdBy, string createdDate,
 							string lastUpdatedBy, string lastUpdatedDate) :
 			base(id, description, isActive, createdBy, createdDate, lastUpdatedBy, lastUpdatedDate)

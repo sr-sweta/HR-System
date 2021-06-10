@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +19,7 @@ namespace Entity
         private string lastName = string.Empty;
         private EmployeeCategory category;
         private EmployeeType employeeType;
+        private ArrayList employeeDocument;
         private DateTime dateOfBirth;
         private DateTime dateOfJoining;
         private bool isDirty = false;
@@ -54,6 +55,12 @@ namespace Entity
         {
             get { return id; }
             set { id = value; IsDirty = true; }
+        }
+
+        public ArrayList EmployeeDocument
+        {
+            get { return employeeDocument; }
+            set { employeeDocument = value; IsDirty = true; }
         }
 
         public string FirstName
@@ -125,6 +132,7 @@ namespace Entity
 
         public Employee()
         {
+            employeeDocument = new ArrayList();
         }
         public Employee( int id, string firstName,string middleName, string lastName, EmployeeCategory category, EmployeeType employeeType, DateTime dateOfJoining, DateTime dateOfBirth, 
         string createdBy, string createdDate, string lastUpdatedBy, string lastUpdatedDate, bool isActive)
@@ -142,7 +150,27 @@ namespace Entity
             this.createdDate = createdDate;
             this.lastUpdatedBy = lastUpdatedBy;
             this.lastUpdatedDate = lastUpdatedDate;
-    }
+            employeeDocument = new ArrayList();
+        }
+
+        public Employee(int id, string firstName, string middleName, string lastName,ArrayList employeeDocument, EmployeeCategory category, EmployeeType employeeType, DateTime dateOfJoining, DateTime dateOfBirth,
+        string createdBy, string createdDate, string lastUpdatedBy, string lastUpdatedDate, bool isActive)
+        {
+            this.id = id;
+            this.firstName = firstName;
+            this.middleName = middleName;
+            this.lastName = lastName;
+            this.category = category;
+            this.employeeType = employeeType;
+            this.dateOfBirth = dateOfBirth;
+            this.dateOfJoining = dateOfJoining;
+            this.isActive = isActive;
+            this.createdBy = createdBy;
+            this.createdDate = createdDate;
+            this.lastUpdatedBy = lastUpdatedBy;
+            this.lastUpdatedDate = lastUpdatedDate;
+            this.employeeDocument = employeeDocument;
+        }
         #endregion
 
     }

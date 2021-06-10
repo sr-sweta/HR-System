@@ -37,12 +37,21 @@ namespace FirstWeb
 
 					TextBoxDOB.Text = employee.DateOfBirth.ToString("dd/MM/yy");
 					TextBoxDOJ.Text = employee.DateOfJoining.ToString("dd/MM/yy");
+					CheckBoxIsActive.Checked = employee.IsActive;
+
+					//bool isActive = ((CheckBox)row.FindControl("checkIsActive")).Checked;
+
+					GridViewDocuments.DataSource = employee.EmployeeDocument;
+					GridViewDocuments.DataBind();
 				}
 				else
 				{
 					employee.Category = new EmployeeCategory(Convert.ToInt32(DropDownCategories.SelectedValue), DropDownCategories.Text);
-					employee.Category = new EmployeeCategory(Convert.ToInt32(DropDownCategories.SelectedValue), DropDownCategories.Text);
+					employee.EmployeeType = new EmployeeType(Convert.ToInt32(DropDownTypes.SelectedValue), DropDownTypes.Text);
 				}
+				GridViewDocuments.DataSource = employee.EmployeeDocument;
+				GridViewDocuments.DataBind();
+				PageHelper.BindListToDropDown(MasterLogic.GetAllActiveDocumentType(), DropDownListDocumentType, "Description", "Id");
 			}
 		}
 
@@ -101,6 +110,7 @@ namespace FirstWeb
 			DOBCalendar.SelectedDate = employee.Id > 0 ? employee.DateOfBirth : DateTime.Today.AddYears(-18);
 			DOBCalendar.VisibleDate = employee.Id > 0 ? employee.DateOfBirth : DateTime.Today.AddYears(-18);
 			DOBCalendar.Visible = true;
+
 		}
 
 		protected void CalendarDOJ_SelectionChanged(object sender, EventArgs e)
@@ -122,6 +132,48 @@ namespace FirstWeb
 		protected void CalendarButtonDOJ_Click(object sender, ImageClickEventArgs e)
 		{
 			DOJCalendar.Visible = true;
+		}
+
+		protected void ButtonUpload_Click(object sender, EventArgs e)
+		{
+			if(FileUploadDocument.PostedFile.ContentLength > 0 && FileUploadDocument.FileName.Trim() != string.Empty)
+			{
+				Employee employee = (Employee)Session["SelectedEmployee"];
+				employee.EmployeeDocument.Add(new EmployeeDocument(-1, FileUploadDocument.PostedFile.FileName, new DocumentType(Convert.ToInt32(DropDownListDocumentType.SelectedValue), DropDownListDocumentType.SelectedItem.Text), FileUploadDocument.PostedFile, true));
+				GridViewDocuments.DataSource = employee.EmployeeDocument;
+				GridViewDocuments.DataBind();
+			}
+		}
+
+		protected void GridViewDocuments_RowCommand(object sender, GridViewCommandEventArgs e)
+		{
+			if(e.CommandName == "Download")
+			{
+				GridViewRow row = (GridViewRow)((Control)e.CommandSource).DataItemContainer;
+				int id = Convert.ToInt32(GridViewDocuments.DataKeys[row.RowIndex]["Id"].ToString());
+				Employee employee = (Employee)Session["SelectedEmployee"];
+				EmployeeDocument document = null;
+				foreach(EmployeeDocument employeeDocument in employee.EmployeeDocument)
+				{
+					if(employeeDocument.Id == id)
+					{
+						document = employeeDocument;
+						break;
+					}
+				}
+				string folderPath = HttpContext.Current.Server.MapPath(".") + @"\bin\EmployeeDocuments\" + employee.Id.ToString() + @"\" + document.Document.Id + @"\" +
+								document.Id + @"\" + document.FileName;
+				Response.AppendHeader("Content-Disposition", "attachment; filename=" + folderPath);
+				Response.TransmitFile(folderPath);
+				Response.End();
+			}
+			
+		}
+
+		protected void CheckBoxIsActive_CheckedChanged(object sender, EventArgs e)
+		{
+			Employee employee = (Employee)Session["SelectedEmployee"];
+			employee.IsActive = CheckBoxIsActive.Checked;
 		}
 	}
 }
