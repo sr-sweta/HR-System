@@ -10,6 +10,9 @@ using BusinessLogic;
 
 namespace FirstWeb
 {
+	/// <summary>
+	/// EmployeeDetails handles all features that we can do with employee data i.e. update and insert
+	/// </summary>
 	public partial class EmployeeDetails : System.Web.UI.Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
@@ -145,6 +148,13 @@ namespace FirstWeb
 			}
 		}
 
+		private void BindEmployeeDocument()
+		{
+			Employee employee = (Employee)Session["SelectedEmployee"];
+			GridViewDocuments.DataSource = employee.EmployeeDocument;
+			GridViewDocuments.DataBind();
+		}
+
 		protected void GridViewDocuments_RowCommand(object sender, GridViewCommandEventArgs e)
 		{
 			if(e.CommandName == "Download")
@@ -167,7 +177,34 @@ namespace FirstWeb
 				Response.TransmitFile(folderPath);
 				Response.End();
 			}
-			
+			else if(e.CommandName == "Remove")
+			{
+				GridViewRow row = (GridViewRow)((Control)e.CommandSource).DataItemContainer;
+				GridViewDocuments.EditIndex = row.RowIndex;
+				BindEmployeeDocument();
+			}
+			else if (e.CommandName == "AlterCancel")
+			{
+				GridViewDocuments.EditIndex = -1;
+				BindEmployeeDocument();
+			}
+			else if (e.CommandName == "Save")
+			{
+				GridViewRow row = (GridViewRow)((Control)e.CommandSource).DataItemContainer;
+				int id = Convert.ToInt32(GridViewDocuments.DataKeys[row.RowIndex]["Id"].ToString());
+				bool isActive = ((CheckBox)row.FindControl("checkIsActive")).Checked;
+				Employee employee = (Employee)Session["SelectedEmployee"];
+				foreach (EmployeeDocument employeeDocument in employee.EmployeeDocument)
+				{
+					if (employeeDocument.Id == id)
+					{
+						employeeDocument.IsActive = isActive;
+					}
+				}
+				EmployeeLogic.UpdateEmployee(employee, (User)Session["User"]);
+				GridViewDocuments.EditIndex = -1;
+				BindEmployeeDocument();
+			}
 		}
 
 		protected void CheckBoxIsActive_CheckedChanged(object sender, EventArgs e)
@@ -175,5 +212,6 @@ namespace FirstWeb
 			Employee employee = (Employee)Session["SelectedEmployee"];
 			employee.IsActive = CheckBoxIsActive.Checked;
 		}
+
 	}
 }

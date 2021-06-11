@@ -18,7 +18,9 @@ namespace DataAccess
 
         #region EmployeeType
 
-        //It reads all Employee Type and returns list of it
+        /// <summary>
+        /// It reads all Employee Type and returns list of it
+        /// </summary>
         public static ArrayList GetAllEmployeeType()
         {
             ArrayList list = new ArrayList();
@@ -43,7 +45,9 @@ namespace DataAccess
             return list;
         }
 
-        //It reads all Active Employee Type and returns the list
+        /// <summary>
+        /// It reads all Active Employee Type and returns the list
+        /// </summary>
         public static ArrayList GetAllActiveEmployeeType()
         {
             ArrayList list = new ArrayList();
@@ -66,7 +70,11 @@ namespace DataAccess
             return list;
         }
 
-        //It inserts new Active Employee Type 
+        /// <summary>
+        /// It inserts new Active Employee Type
+        /// </summary>
+        /// <param name="employeeType"></param>
+        /// <param name="user"></param> 
         public static void InsertEmployeeType(EmployeeType employeeType, User user)
         {
             SqlCommand command = DataHelper.GetSqlCommandObject("usp_InsertEmployeeType");
@@ -79,7 +87,11 @@ namespace DataAccess
             employeeType.Id = Convert.ToInt32(command.Parameters["@Id"].Value.ToString());
         }
 
-        //It updates the Description and Active status of Employee Type
+        /// <summary>
+        /// It updates the Description and Active status of Employee Type
+        /// </summary>
+        /// <param name="employeeType"></param>
+        /// <param name="user"></param>
         public static void UpdateEmployeeType(EmployeeType employeeType, User user)
         {
             SqlCommand command = DataHelper.GetSqlCommandObject("usp_UpdateEmployeeType");
@@ -98,7 +110,9 @@ namespace DataAccess
 
         #region EmployeeCategory
 
-        //It reads all Employee Category and returns list of it
+        ///<summary>
+        ///It reads all Employee Category and returns list of it
+        /// </summary>
         public static ArrayList GetAllEmployeeCategory()
         {
             ArrayList list = new ArrayList();
@@ -122,7 +136,9 @@ namespace DataAccess
             return list;
         }
 
-        //It reads all Active Employee Category and returns the list
+        /// <summary>
+        /// It reads all Active Employee Category and returns the list
+        /// </summary>
         public static ArrayList GetAllActiveEmployeeCategory()
         {
             ArrayList list = new ArrayList();
@@ -145,7 +161,11 @@ namespace DataAccess
             return list;
         }
 
-        //It inserts new Active Employee Category 
+        /// <summary>
+        /// It inserts new Active Employee Category 
+        /// </summary>
+        /// <param name="employeeCategory"></param>
+        /// <param name="user"></param>
         public static void InsertEmployeeCategory(EmployeeCategory employeeCategory, User user)
         {
             SqlCommand command = DataHelper.GetSqlCommandObject("usp_InsertEmployeeCategory");
@@ -158,7 +178,11 @@ namespace DataAccess
             employeeCategory.Id = Convert.ToInt32(command.Parameters["@Id"].Value.ToString());
         }
 
-        //It updates the Description and Active status of Employee Category
+        /// <summary>
+        /// It updates the Description and Active status of Employee Category
+        /// </summary>
+        /// <param name="employeeCategory"></param>
+        /// <param name="user"></param>
         public static void UpdateEmployeeCategory(EmployeeCategory employeeCategory, User user)
         {
             SqlCommand command = DataHelper.GetSqlCommandObject("usp_UpdateEmployeeCategory");
@@ -177,7 +201,9 @@ namespace DataAccess
 
         #region DocumentType
 
-        //It reads all Document Type and returns list of it
+        ///<summary>
+        ///It reads all Document Type and returns list of it
+        /// </summary>
         public static ArrayList GetAllDocumentType()
         {
             ArrayList list = new ArrayList();
@@ -202,7 +228,9 @@ namespace DataAccess
             return list;
         }
 
-        //It reads all Active Document Type and returns the list
+        /// <summary>
+        /// It reads all Active Document Type and returns the list
+        /// </summary>
         public static ArrayList GetAllActiveDocumentType()
         {
             ArrayList list = new ArrayList();
@@ -225,7 +253,11 @@ namespace DataAccess
             return list;
         }
 
-        //It inserts new Active Document Type 
+        /// <summary>
+        /// It inserts new Active Document Type 
+        /// </summary>
+        /// <param name="DocumentType"></param>
+        /// <param name="user"></param>
         public static void InsertDocumentType(DocumentType DocumentType, User user)
         {
             SqlCommand command = DataHelper.GetSqlCommandObject("usp_InsertDocumentType");
@@ -238,7 +270,11 @@ namespace DataAccess
             DocumentType.Id = Convert.ToInt32(command.Parameters["@Id"].Value.ToString());
         }
 
-        //It updates the Description and Active status of Document Type 
+        /// <summary>
+        /// It updates the Description and Active status of Document Type 
+        /// </summary>
+        /// <param name="DocumentType"></param>
+        /// <param name="user"></param>
         public static void UpdateDocumentType(DocumentType DocumentType, User user)
         {
             SqlCommand command = DataHelper.GetSqlCommandObject("usp_UpdateDocumentType");

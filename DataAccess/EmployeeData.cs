@@ -11,8 +11,16 @@ using System.IO;
 
 namespace DataAccess
 {
+    /// <summary>
+    /// EmployeeData handles data for insert, update and search of any employee
+    /// </summary>
 	public class EmployeeData
 	{
+        /// <summary>
+        /// InsertEmployee insert employee data to employee table
+        /// </summary>
+        /// <param name="employee"></param>
+        /// <param name="user"></param>
         public static void InsertEmployee(Employee employee, User user)
         {
             SqlCommand command = DataHelper.GetSqlCommandObject("usp_InsertEmployee");
@@ -50,6 +58,14 @@ namespace DataAccess
 			}
         }
 
+        /// <summary>
+        /// InsertEmployeeDocument insert employees document to backend
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <param name="employeeDocument"></param>
+        /// <param name="transaction"></param>
+        /// <param name="connection"></param>
+        /// <param name="user"></param>
         public static void InsertEmployeeDocument(int employeeId,EmployeeDocument employeeDocument, SqlTransaction transaction,SqlConnection connection, User user)
         {
 
@@ -74,9 +90,15 @@ namespace DataAccess
             employeeDocument.PostedFile.SaveAs(folderPath + employeeDocument.PostedFile.FileName);
         }
 
+        /// <summary>
+        /// UpdateEmployee updates employee data in employee table
+        /// </summary>
+        /// <param name="employee"></param>
+        /// <param name="user"></param>
         public static void UpdateEmployee(Employee employee, User user)
         {
             SqlCommand command = DataHelper.GetSqlCommandObject("usp_UpdateEmployee");
+            command.CommandType = CommandType.StoredProcedure;
             SqlTransaction transaction = command.Connection.BeginTransaction();
 			try
 			{
@@ -101,7 +123,8 @@ namespace DataAccess
                     }
                     else if(document.Id > 0 && document.IsDirty)
 					{
-                        UpdateEmployeeDocument(document.Id, transaction);
+                        // UpdateEmployeeDocument(document.Id, transaction);
+                        UpdateEmployeeDocument(document.Id);
                     }
                 }
                 transaction.Commit();
@@ -113,14 +136,27 @@ namespace DataAccess
             }
         }
 
-        public static void UpdateEmployeeDocument(int documentId, SqlTransaction transaction)
+        /// <summary>
+        /// UpdateEmployeeDocument updates employee document 
+        /// </summary>
+        /// <param name="documentId"></param>
+        /// <param name="transaction"></param>
+        //public static void UpdateEmployeeDocument(int documentId, SqlTransaction transaction)
+        public static void UpdateEmployeeDocument(int documentId)
         {
             SqlCommand command = DataHelper.GetSqlCommandObject("usp_UpdateEmployeeDocument");
             command.Parameters.Add(new SqlParameter("@Id", documentId));
-            command.Transaction = transaction;
+            //command.Transaction = transaction;
             command.ExecuteNonQuery();
         }
 
+        /// <summary>
+        /// SearchActiveEmployees searchs all employees who are active
+        /// </summary>
+        /// <param name="typeId"></param>
+        /// <param name="categoryId"></param>
+        /// <param name="employeeName"></param>
+        /// <returns></returns>
         public static ArrayList SearchActiveEmployees(int typeId, int categoryId, string employeeName)
         {
             ArrayList list = new ArrayList();
@@ -150,6 +186,11 @@ namespace DataAccess
             return list;
         }
 
+        /// <summary>
+        /// SearchEmployeesById searchs employee by id 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static Employee SearchEmployeesById(int id)
         {
             Employee employee = null;
@@ -175,6 +216,11 @@ namespace DataAccess
             return employee;
         }
 
+        /// <summary>
+        /// GetEmployeeDocumentById searchs employee document by employee id
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <returns></returns>
         private static ArrayList GetEmployeeDocumentById(int employeeId)
 		{
             ArrayList list = new ArrayList();
@@ -199,6 +245,13 @@ namespace DataAccess
             return list;
         }
 
+        /// <summary>
+        /// SearchEmployees searchs all employee according to provided details wheather he is active or not
+        /// </summary>
+        /// <param name="typeId"></param>
+        /// <param name="categoryId"></param>
+        /// <param name="employeeName"></param>
+        /// <returns></returns>
         public static ArrayList SearchEmployees(int typeId, int categoryId, string employeeName)
         {
             ArrayList list = new ArrayList();

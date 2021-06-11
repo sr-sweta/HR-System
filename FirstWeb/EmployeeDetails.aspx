@@ -160,13 +160,39 @@
 				<td colspan="3" style="text-align:right;margin-left:10%;">
 					<asp:GridView OnRowCommand="GridViewDocuments_RowCommand" DataKeyNames="Id" runat="server" AutoGenerateColumns="false" ID="GridViewDocuments" Width="100%">
 						<Columns>
-							<asp:BoundField HeaderText="Document Type" DataField="DocumentTypeText" />
-							<asp:BoundField HeaderText="FileName" DataField="FileName"/>
-							<asp:CommandField ShowDeleteButton="true" />
+							<asp:TemplateField HeaderText="Document Type">
+								<ItemTemplate>
+									<asp:Label runat="server" ID="LabelDocumentType" Text=<%#Eval("DocumentTypeText") %>></asp:Label>
+								</ItemTemplate>
+								<EditItemTemplate>
+									<asp:Label runat="server" ID="LabelDocumentTypeEdit" Text=<%#Eval("DocumentTypeText") %>></asp:Label>
+								</EditItemTemplate>
+							</asp:TemplateField>
+							<asp:TemplateField HeaderText="FileName">
+								<ItemTemplate>
+									<asp:Label runat="server" ID="LabelFileName" Text=<%#Eval("FileName") %>></asp:Label>
+								</ItemTemplate>
+								<EditItemTemplate>
+									<asp:Label runat="server" ID="LabelFileNameEdit" Text=<%#Eval("FileName") %>></asp:Label>
+								</EditItemTemplate>
+							</asp:TemplateField>
+							<asp:TemplateField HeaderText="IsActive">
+								<ItemTemplate>
+									<asp:Label runat="server" ID="LabelIsActive" Text=<%#Eval("IsActiveText") %>></asp:Label>
+								</ItemTemplate>
+								<EditItemTemplate>
+									<asp:CheckBox runat="server" Style="text-align:center;" ID="CheckIsActive" checked=<%#Eval("IsActive") %>></asp:CheckBox>
+								</EditItemTemplate>
+							</asp:TemplateField>
 							<asp:TemplateField>
 								<ItemTemplate>
+									<asp:LinkButton ID="ButtonDelete" runat="server" CommandName="Remove" Text="Delete"></asp:LinkButton>
 									<asp:LinkButton ID="ButtonDownload" runat="server" CommandName="Download" Text="Download"></asp:LinkButton>
 								</ItemTemplate>
+								<EditItemTemplate>
+									<asp:LinkButton runat="server" ID="ButtonSave" CommandName="Save" Text="Save"></asp:LinkButton>
+									<asp:LinkButton runat="server" ID="ButtonCancel" CommandName="AlterCancel" Text="Cancel"></asp:LinkButton>
+								</EditItemTemplate>
 							</asp:TemplateField>
 						</Columns>
 					</asp:GridView>

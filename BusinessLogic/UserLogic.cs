@@ -14,7 +14,11 @@ namespace BusinessLogic
 
     public class UserLogic
     {
-        //Receives User data from Data Access Layer after validation is successfull
+        /// <summary>
+        /// Receives User data from Data Access Layer after validation is successfull
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="password"></param>
         public static User ValidateUser(string userName, string password)
         {
             return UserData.ValidateUser(userName, password);

@@ -9,7 +9,11 @@ namespace DataAccess
    
     public class DataHelper
     {
-        //GetSqlCommandObject function creates command for all stored procedures
+        /// <summary>
+        /// GetSqlCommandObject function creates command for all stored procedures
+        /// </summary>
+        /// <param name="procedureName"></param>
+        /// <returns></returns>
         internal static SqlCommand GetSqlCommandObject(string procedureName)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["FirstWeb"].ToString();

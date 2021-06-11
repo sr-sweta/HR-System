@@ -9,7 +9,10 @@ using BusinessLogic;
 
 namespace FirstWeb
 {
-    public partial class Employees : System.Web.UI.Page
+	/// <summary>
+	/// Employees handles all related to search of any employee according to provided details
+	/// </summary>
+	public partial class Employees : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

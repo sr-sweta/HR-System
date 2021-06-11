@@ -11,7 +11,9 @@ namespace DataAccess
     
     public class UserData
     {
-        //Validates User credentials for login
+        ///<summary>
+        /// Validates User credentials for login and return user
+        /// </summary>
         public static User ValidateUser(string userName, string password)
         {
             User user = null;

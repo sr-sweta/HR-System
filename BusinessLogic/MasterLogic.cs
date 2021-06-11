@@ -22,7 +22,9 @@ namespace BusinessLogic
 
         #region EmployeeType
 
-        //Save new created Employee Type
+        ///<summary>
+        /// Save new created Employee Type
+        /// </summary>
         public static void SaveEmployeeType(EmployeeType employeeType, User user)
         {
             if (employeeType.Id < 0 && employeeType.IsActive)
@@ -35,13 +37,17 @@ namespace BusinessLogic
             }
         }
 
-        //Receives list of all Employee Type from Data Access Layer
+        /// <summary>
+        /// Receives list of all Employee Type from Data Access Layer
+        /// </summary>
         public static ArrayList GetAllEmployeeType()
         {
             return MasterData.GetAllEmployeeType();
         }
 
-        //Receives list of all Active Employee Type from Data Access Layer
+        /// <summary>
+        ///  Receives list of all Active Employee Type from Data Access Layer
+        /// </summary>
         public static ArrayList GetAllActiveEmployeeType()
         {
             return MasterData.GetAllActiveEmployeeType();
@@ -58,7 +64,9 @@ namespace BusinessLogic
 
         #region EmployeeCategory
 
-        //Save new created Employee Category
+        ///<summary>
+        /// Save new created Employee Category
+        /// </summary>
         public static void SaveEmployeeCategory(EmployeeCategory employeeCategory, User user)
         {
             if (employeeCategory.Id < 0 && employeeCategory.IsActive)
@@ -71,13 +79,17 @@ namespace BusinessLogic
             }
         }
 
-        //Receives list of all Employee Category from Data Access Layer
+        /// <summary>
+        /// Receives list of all Employee Category from Data Access Layer
+        /// </summary>
         public static ArrayList GetAllEmployeeCategory()
         {
             return MasterData.GetAllEmployeeCategory();
         }
 
-        //Receives list of all Active Employee Category from Data Access Layer
+        /// <summary>
+        /// Receives list of all Active Employee Category from Data Access Layer
+        /// </summary>
         public static ArrayList GetAllActiveEmployeeCategory()
         {
             return MasterData.GetAllActiveEmployeeCategory();
@@ -94,7 +106,9 @@ namespace BusinessLogic
 
         #region DocumentType
 
-        //Save new created Document Type
+        ///<summary>
+        /// Save new created Document Type
+        /// </summary>
         public static void SaveDocumentType(DocumentType documentType, User user)
         {
             if (documentType.Id < 0 && documentType.IsActive)
@@ -107,13 +121,17 @@ namespace BusinessLogic
             }
         }
 
-        //Receives list of all Document Type from Data Access Layer
+        /// <summary>
+        /// Receives list of all Document Type from Data Access Layer
+        /// </summary>
         public static ArrayList GetAllDocumentType()
         {
             return MasterData.GetAllDocumentType();
         }
 
-        //Receives list of all Active Document Type from Data Access Layer
+        /// <summary>
+        /// Receives list of all Active Document Type from Data Access Layer
+        /// </summary>
         public static ArrayList GetAllActiveDocumentType()
         {
             return MasterData.GetAllActiveDocumentType();
