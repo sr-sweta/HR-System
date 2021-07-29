@@ -1,7 +1,11 @@
 # HR-System
 This is an HR-System which can be used to keep the employee details and employee categories in an organisation. Keeping in mind about my college staff mamnagemant system I made it. 
 
-![forthebadge](https://forthebadge.com/images/badges/asp.net.svg)![forthebadge](https://forthebadge.com/images/badges/c#.svg)![forthebadge](https://forthebadge.com/images/badges/sql-server.svg)![forthebadge](https://forthebadge.com/images/badges/html.svg)![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)![forthebadge](https://forthebadge.com/images/badges/bootstrap.svg)
+[![GitHub watchers](https://img.shields.io/github/watchers/Naereen/StrapDown.js.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/Naereen/StrapDown.js/watchers/)[![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)](https://GitHub.com/Naereen/)[![ForTheBadge uses-badges](http://ForTheBadge.com/images/badges/uses-badges.svg)](http://ForTheBadge.com)
+[![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)[![ForTheBadge uses-html](http://ForTheBadge.com/images/badges/uses-html.svg)](http://ForTheBadge.com)[![ForTheBadge uses-css](http://ForTheBadge.com/images/badges/uses-css.svg)](http://ForTheBadge.com)[![ForTheBadge uses-js](http://ForTheBadge.com/images/badges/uses-js.svg)](http://ForTheBadge.com)
+
+
+
 
 
 
