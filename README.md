@@ -16,10 +16,11 @@ It needs `username` and `Password` for login.
 ## Search Employee
 
 After login the first page appears contains the search bar. 
-`Name` will help to show all names which contains the provided name string.
-`Type` dropdown lists all the types of employee.
-`Category` dropdown lists all the categories of employee.
-`Include Delete` checkbox will list all employees who is either no longer works in the college or whose account is not active.
+
+-`Name` will help to show all names which contains the provided name string.
+-`Type` dropdown lists all the types of employee.
+-`Category` dropdown lists all the categories of employee.
+-`Include Delete` checkbox will list all employees who is either no longer works in the college or whose account is not active.
 
 ![Screenshot (797)](https://user-images.githubusercontent.com/70569920/127456933-5d0a000a-0f00-43ec-8795-1beaa8123935.png)
 
