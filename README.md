@@ -1,13 +1,7 @@
 # HR-System
 This is an HR-System which can be used to keep the employee details and employee categories in an organisation. Keeping in mind about my college staff mamnagemant system I made it. 
 
-```diff
-text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
+<b style='color:red'>red words</b>
 
 
 
