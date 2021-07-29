@@ -1,14 +1,17 @@
 # HR-System
-This is an HR-System which can be used to keep the employee details and employee categories in an organisation. Keeping in mind about my college staff mamnagemant system I made it. 
+This is an HR-System which can be used to keep the employee details and employee categories in an organisation. Keeping in mind about my college staff mamnagemant system I made it. Its backend is made using my system local SQL Server.
 
-[![GitHub watchers](https://img.shields.io/github/watchers/Naereen/StrapDown.js.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/Naereen/StrapDown.js/watchers/)[![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)
+[![GitHub watchers](https://img.shields.io/github/watchers/Naereen/StrapDown.js.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/Naereen/StrapDown.js/watchers/)
 
-[![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)](https://GitHub.com/Naereen/)[![ForTheBadge uses-badges](http://ForTheBadge.com/images/badges/uses-badges.svg)](http://ForTheBadge.com)
-[![ForTheBadge uses-html](http://ForTheBadge.com/images/badges/uses-html.svg)](http://ForTheBadge.com)[![ForTheBadge uses-css](http://ForTheBadge.com/images/badges/uses-css.svg)](http://ForTheBadge.com)[![ForTheBadge uses-js](http://ForTheBadge.com/images/badges/uses-js.svg)](http://ForTheBadge.com)
-
-
-
-
+**Made it using**
+- ASP
+- DOTNET
+- C#
+- Microsoft SQL Server 2019
+- HTML
+- CSS
+- Bootstrap
+- Javascript
 
 
 ## Login Credentials
