@@ -1,6 +1,13 @@
 # HR-System
 This is an HR-System which can be used to keep the employee details and employee categories in an organisation. Keeping in mind about my college staff mamnagemant system I made it. 
 
+---
+**NOTE**
+
+It works with almost all markdown flavours (the below blank line matters).
+
+---
+
 
 
 ## Login Credentials
@@ -97,7 +104,7 @@ Any employee data can be updated in any way.
 
 
 
-Only `Name` and `IsActive` data can be updated for `Employee Type` and `Employee Category`.
+Only `Name` and `IsActive` data can be updated for `Employee Type`, `Employee Category` and `Document Type`.
 
 
 ![Screenshot (804)](https://user-images.githubusercontent.com/70569920/127480176-a6967583-9860-4e80-945b-32dfc8e96a0b.png)
