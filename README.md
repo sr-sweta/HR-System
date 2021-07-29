@@ -1,7 +1,7 @@
 # HR-System
 This is an HR-System which can be used to keep the employee details and employee categories in an organisation. Keeping in mind about my college staff mamnagemant system I made it. 
 
-<b style='color:red'>red words</b>
+![forthebadge](https://forthebadge.com/images/badges/asp.net.svg)![forthebadge](https://forthebadge.com/images/badges/c#.svg)![forthebadge](https://forthebadge.com/images/badges/sql-server.svg)![forthebadge](https://forthebadge.com/images/badges/html.svg)![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)![forthebadge](https://forthebadge.com/images/badges/bootstrap.svg)
 
 
 
