@@ -5,6 +5,8 @@ This is an HR-System which can be used to keep the employee details and employee
 - ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+SQLServer) `#c5f015`
 - ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+C#) `#1589F0`
 
+<span style="color: green"> Some green text </span>
+
 
 
 ## Login Credentials
