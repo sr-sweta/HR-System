@@ -1,12 +1,9 @@
 # HR-System
 This is an HR-System which can be used to keep the employee details and employee categories in an organisation. Keeping in mind about my college staff mamnagemant system I made it. 
 
----
-**NOTE**
-
-It works with almost all markdown flavours (the below blank line matters).
-
----
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+ASP.NET) `#f03c15`
+- ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+SQLServer) `#c5f015`
+- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+C#) `#1589F0`
 
 
 
