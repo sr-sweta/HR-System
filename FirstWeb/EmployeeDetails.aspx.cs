@@ -43,9 +43,6 @@ namespace FirstWeb
 					CheckBoxIsActive.Checked = employee.IsActive;
 
 					//bool isActive = ((CheckBox)row.FindControl("checkIsActive")).Checked;
-
-					GridViewDocuments.DataSource = employee.EmployeeDocument;
-					GridViewDocuments.DataBind();
 				}
 				else
 				{

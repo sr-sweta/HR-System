@@ -123,7 +123,6 @@ namespace DataAccess
                     }
                     else if(document.Id > 0 && document.IsDirty)
 					{
-                        // UpdateEmployeeDocument(document.Id, transaction);
                         UpdateEmployeeDocument(document.Id);
                     }
                 }
@@ -141,12 +140,10 @@ namespace DataAccess
         /// </summary>
         /// <param name="documentId"></param>
         /// <param name="transaction"></param>
-        //public static void UpdateEmployeeDocument(int documentId, SqlTransaction transaction)
         public static void UpdateEmployeeDocument(int documentId)
         {
             SqlCommand command = DataHelper.GetSqlCommandObject("usp_UpdateEmployeeDocument");
             command.Parameters.Add(new SqlParameter("@Id", documentId));
-            //command.Transaction = transaction;
             command.ExecuteNonQuery();
         }
 

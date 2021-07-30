@@ -9,7 +9,7 @@
 		<br />
 		<br />
 		<asp:GridView ID="GridViewEmployees" DataKeyNames="Id" OnRowEditing="GridViewEmployees_RowEditing" EmptyDataText="No data available" runat="server" Visible="true" 
-			AlternatingRowStyle-BackColor="WhiteSmoke" AutoGenerateColumns="false" Width="811px" Font-Type="Helvetica" CellPadding="4" ForeColor="Black" BackColor="#CCCCCC"
+			AlternatingRowStyle-BackColor="WhiteSmoke" AutoGenerateColumns="false" Width="811px" CellPadding="4" ForeColor="Black" BackColor="#CCCCCC"
 			BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellSpacing="2">
 					<Columns>
 						<asp:TemplateField HeaderText="FirstName">

@@ -40,12 +40,12 @@ namespace FirstWeb
 			ArrayList employees;
 			if (CheckDeleted.Checked)
 			{
-				employees = EmployeeLogic.SearchActiveEmployees(Convert.ToInt32(DropDownTypes.SelectedValue), Convert.ToInt32(DropDownCategories.SelectedValue),
+				employees = EmployeeLogic.SearchEmployees(Convert.ToInt32(DropDownTypes.SelectedValue), Convert.ToInt32(DropDownCategories.SelectedValue),
 				TextBoxName.Text);
 			}
 			else
 			{
-				employees = EmployeeLogic.SearchEmployees(Convert.ToInt32(DropDownTypes.SelectedValue), Convert.ToInt32(DropDownCategories.SelectedValue),
+				employees = EmployeeLogic.SearchActiveEmployees(Convert.ToInt32(DropDownTypes.SelectedValue), Convert.ToInt32(DropDownCategories.SelectedValue),
 				TextBoxName.Text);
 			}
 			GridViewEmployees.DataSource = employees;
